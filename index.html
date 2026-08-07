@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hyunseok Lee — Autonomous Driving, Robotics, and AI portfolio." />
+  <title>Hyunseok Lee | Autonomous Driving & Robotics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#about">Hyunseok Lee</a>
+
+      <button class="menu-button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section class="hero section" id="about">
+      <div class="container hero-grid">
+        <aside class="profile-card">
+          <!--
+            사진을 쓰고 싶다면 아래 .avatar div 대신 다음 코드를 사용하세요.
+            <img class="profile-photo" src="assets/profile.jpg" alt="Hyunseok Lee">
+          -->
+          <div class="avatar" aria-hidden="true">HL</div>
+
+          <h1>Hyunseok Lee</h1>
+          <p class="role">Mechanical Engineering Student</p>
+          <p class="focus">Autonomous Driving · Robotics · AI</p>
+
+          <div class="profile-links">
+            <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+            <a href="assets/Hyunseok_Lee_CV.pdf" target="_blank">CV</a>
+            <a href="https://github.com/s01011038-code" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_ID/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </aside>
+
+        <div class="hero-content">
+          <p class="eyebrow">ABOUT ME</p>
+          <h2>
+            Building autonomous systems that connect
+            <span>learning, planning, and real-world driving.</span>
+          </h2>
+
+          <p>
+            I am an undergraduate student in Mechanical Engineering interested in
+            autonomous driving, robotics, reinforcement learning, and end-to-end
+            learning-based driving systems.
+          </p>
+
+          <p>
+            My recent work includes diffusion-based trajectory generation for
+            end-to-end autonomous driving, F1TENTH autonomous racing, and
+            learning-based computer vision. I am particularly interested in
+            developing intelligent driving systems that can move beyond
+            simulation and operate reliably in real vehicle environments.
+          </p>
+
+          <div class="interest-box">
+            <h3>Research Interests</h3>
+            <div class="tags">
+              <span>End-to-End Autonomous Driving</span>
+              <span>Vision-Language-Action</span>
+              <span>Reinforcement Learning</span>
+              <span>Diffusion Models</span>
+              <span>World Models</span>
+              <span>Robotics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section alt-section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">BACKGROUND</p>
+          <h2>Education</h2>
+        </div>
+
+        <article class="timeline-item">
+          <div class="timeline-date">20XX — Present</div>
+          <div>
+            <h3>[University Name]</h3>
+            <p class="subtitle">B.S. Candidate in Mechanical Engineering</p>
+            <p>
+              Coursework and project experience in machine learning, deep learning,
+              reinforcement learning, autonomous driving, robotics, and data structures.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>Projects & Research</h2>
+          <p>
+            Selected projects focusing on autonomous driving, reinforcement learning,
+            and learning-based perception and planning.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-number">01</div>
+            <div class="project-body">
+              <div class="project-topline">
+                <div>
+                  <h3>Diffusion-Based End-to-End Autonomous Driving</h3>
+                  <p class="project-meta">Graduation Research · NAVSIM</p>
+                </div>
+                <span class="project-type">Research</span>
+              </div>
+
+              <p>
+                Investigated efficient trajectory generation for end-to-end autonomous
+                driving by combining a diffusion-based planning pipeline with a
+                consistency-model approach.
+              </p>
+
+              <ul>
+                <li>Studied DiffusionDrive and its perception-to-trajectory pipeline.</li>
+                <li>Implemented a trajectory module using a linear DiG-style backbone and consistency model.</li>
+                <li>Evaluated candidate trajectories using NAVSIM and PDMS-related metrics.</li>
+                <li>Analyzed trajectory instability, inference latency, and limitations of the consistency-model implementation.</li>
+              </ul>
+
+              <div class="tags">
+                <span>End-to-End AD</span>
+                <span>Diffusion Model</span>
+                <span>Consistency Model</span>
+                <span>PyTorch</span>
+                <span>NAVSIM</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#" aria-label="Project report placeholder">Report ↗</a>
+                <a href="#" aria-label="GitHub repository placeholder">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">02</div>
+            <div class="project-body">
+              <div class="project-topline">
+                <div>
+                  <h3>F1TENTH Autonomous Racing</h3>
+                  <p class="project-meta">Autonomous Driving Project</p>
+                </div>
+                <span class="project-type">Robotics</span>
+              </div>
+
+              <p>
+                Developed and improved planning, localization, and vehicle-control
+                components for an F1TENTH autonomous racing platform.
+              </p>
+
+              <ul>
+                <li>Implemented and improved a Pure Pursuit controller using Frenet-coordinate reasoning.</li>
+                <li>Worked with Particle Filter localization and RRT-based planning.</li>
+                <li>Built tools for reference-path editing and real-time target-speed tuning in ROS/RViz.</li>
+                <li>Diagnosed localization failures through LiDAR and vehicle-state visualization during repeated driving tests.</li>
+              </ul>
+
+              <div class="tags">
+                <span>F1TENTH</span>
+                <span>ROS</span>
+                <span>Pure Pursuit</span>
+                <span>Particle Filter</span>
+                <span>RRT</span>
+                <span>RViz</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">Project ↗</a>
+                <a href="#">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">03</div>
+            <div class="project-body">
+              <div class="project-topline">
+                <div>
+                  <h3>Reflection Removal with Diffusion Models</h3>
+                  <p class="project-meta">Undergraduate Research Project</p>
+                </div>
+                <span class="project-type">Computer Vision</span>
+              </div>
+
+              <p>
+                Explored diffusion-based approaches for removing reflections from
+                real-world images and reproduced a prior method whose implementation
+                was not publicly available.
+              </p>
+
+              <ul>
+                <li>Designed a lightweight training pipeline under hardware and time constraints.</li>
+                <li>Compared diffusion-based restoration strategies for reflection removal.</li>
+                <li>Evaluated results using SSIM and PSNR while examining the gap between quantitative metrics and visible reflection removal quality.</li>
+              </ul>
+
+              <div class="tags">
+                <span>Computer Vision</span>
+                <span>Diffusion</span>
+                <span>Image Restoration</span>
+                <span>SSIM</span>
+                <span>PSNR</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">Report ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">04</div>
+            <div class="project-body">
+              <div class="project-topline">
+                <div>
+                  <h3>Reinforcement Learning Benchmark Study</h3>
+                  <p class="project-meta">Machine Learning / Reinforcement Learning</p>
+                </div>
+                <span class="project-type">RL</span>
+              </div>
+
+              <p>
+                Implemented and compared value-based and policy-based reinforcement
+                learning algorithms across classic control environments.
+              </p>
+
+              <ul>
+                <li>Implemented Dueling DQN, Double DQN, and PPO.</li>
+                <li>Compared learning speed and stability on CartPole, Acrobot, and MountainCar.</li>
+                <li>Analyzed the influence of sparse rewards and replay-based learning on performance.</li>
+              </ul>
+
+              <div class="tags">
+                <span>Reinforcement Learning</span>
+                <span>Dueling DQN</span>
+                <span>Double DQN</span>
+                <span>PPO</span>
+                <span>Gymnasium</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">Report ↗</a>
+                <a href="#">Code ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section alt-section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">EXPERIENCE</p>
+          <h2>Research & Activities</h2>
+        </div>
+
+        <article class="timeline-item">
+          <div class="timeline-date">20XX — 20XX</div>
+          <div>
+            <h3>Undergraduate Researcher</h3>
+            <p class="subtitle">Autonomous Driving / AI Research</p>
+            <p>
+              Conducted research on end-to-end autonomous driving and learning-based
+              trajectory generation.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">20XX</div>
+          <div>
+            <h3>F1TENTH Autonomous Racing Project</h3>
+            <p class="subtitle">Path Planning & Control</p>
+            <p>
+              Developed autonomous racing algorithms and performed repeated
+              vehicle-level testing and debugging.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">20XX</div>
+          <div>
+            <h3>Undergraduate Research Program</h3>
+            <p class="subtitle">Reflection Removal with AI</p>
+            <p>
+              Studied diffusion-based image restoration and reflection-removal methods
+              in a collaborative research project.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">TECHNICAL SKILLS</p>
+          <h2>Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Programming</h3>
+            <p>Python, C++, MATLAB</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>AI / ML</h3>
+            <p>PyTorch, Deep Learning, Reinforcement Learning, Diffusion Models</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Autonomous Driving</h3>
+            <p>End-to-End Driving, Planning, Control, Localization, F1TENTH</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Robotics</h3>
+            <p>ROS, RViz, Linux, Simulation, Sensor-based Debugging</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-inner">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Interested in autonomous driving, robotics, and embodied AI.</h2>
+        <p>
+          For research, collaboration, or career opportunities, feel free to reach out.
+        </p>
+
+        <div class="contact-links">
+          <a class="button primary" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
+          <a class="button" href="https://github.com/s01011038-code" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Hyunseok Lee.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
