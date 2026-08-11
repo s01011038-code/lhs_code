@@ -3,15 +3,17 @@ const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-menu a");
 const sections = document.querySelectorAll("main section[id]");
 
-menuButton.addEventListener("click", () => {
-  const isOpen = navMenu.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-});
+if (menuButton && navMenu) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+}
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navMenu.classList.remove("open");
-    menuButton.setAttribute("aria-expanded", "false");
+    navMenu?.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
   });
 });
 
@@ -28,11 +30,10 @@ const observer = new IntersectionObserver(
       });
     });
   },
-  {
-    rootMargin: "-25% 0px -65% 0px",
-  }
+  { rootMargin: "-25% 0px -65% 0px" }
 );
 
 sections.forEach((section) => observer.observe(section));
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
