@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hyunseok Lee — Autonomous Driving, Robotics, and AI portfolio." />
+  <title>Hyunseok Lee | Autonomous Driving & Robotics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#about">Hyunseok Lee</a>
+
+      <button class="menu-button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section class="hero section" id="about">
+      <div class="container hero-grid">
+        <aside class="profile-card">
+          <img class="profile-photo" src="assets/profile.jpg" alt="Hyunseok Lee">
+
+          <h1>Hyunseok Lee</h1>
+          <p class="role">B.S. in Mechanical Engineering, UNIST</p>
+          <p class="focus">Autonomous Driving · Robotics</p>
+
+          <div class="profile-links">
+            <a href="mailto:lhs2008@unist.ac.kr">Email</a>
+            <a href="assets/Hyunseok_Lee_CV.pdf" target="_blank">CV</a>
+          </div>
+        </aside>
+
+        <div class="hero-content">
+          <p class="eyebrow">ABOUT ME</p>
+          <h2>
+            Building autonomous systems that connect
+            <span>learning, planning, and real-world driving.</span>
+          </h2>
+
+          <p>
+            I received my B.S. in Mechanical Engineering from UNIST in August 2026.
+            My research interests lie in autonomous driving and robotics.
+            I am interested in applying Vision-Language Models (VLMs) and World Models
+            to learning-based autonomous systems in these fields.
+          </p>
+
+          <div class="interest-box">
+            <h3>Research Interests</h3>
+            <div class="tags">
+              <span>Autonomous Driving</span>
+              <span>Robotics</span>
+              <span>Vision-Language Models</span>
+              <span>World Models</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section alt-section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">BACKGROUND</p>
+          <h2>Education</h2>
+        </div>
+
+        <article class="timeline-item">
+          <div class="timeline-date">2020 — 2026</div>
+          <div>
+            <h3>Ulsan National Institute of Science and Technology (UNIST)</h3>
+            <p class="subtitle">B.S. in Mechanical Engineering</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>Projects & Research</h2>
+          <p>
+            Selected projects focusing on autonomous driving, robotics,
+            and learning-based intelligent systems.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-number">01</div>
+            <div class="project-body">
+              <div class="project-topline">
+                <div>
+                  <h3>Diffusion-Based End-to-End Autonomous Driving</h3>
+                  <p class="project-meta">Research Project · Robotics & Mobility Lab, UNIST</p>
+                </div>
+                <span class="project-type">Research</span>
+              </div>
+
+              <p>
+                Investigated the real-time performance of DiffusionDrive for end-to-end autonomous driving.
+                I introduced a DiG-based backbone and a consistency-model-based training strategy into the
+                trajectory generation module, and evaluated the modified pipeline on the NAVSIM benchmark.
+              </p>
+
+              <ul>
+                <li>Removed K-means anchor preprocessing and generated multiple trajectories from pure noise, selecting the final trajectory using PDMS submetrics.</li>
+                <li>Evaluated the modified pipeline on NAVSIM, where latency increased from 459.9 ms to 808.75 ms and PDMS decreased from 0.881 to 0.642.</li>
+                <li>Analyzed the latency bottleneck by separating the diffusion decoder from the full pipeline, identifying both decoder overhead and repeated candidate-evaluation costs.</li>
+              </ul>
+
+              <div class="tags">
+                <span>End-to-End Autonomous Driving</span>
+                <span>Diffusion Model</span>
+                <span>Consistency Model</span>
+                <span>DiG</span>
+                <span>NAVSIM</span>
+                <span>PyTorch</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">02</div>
+            <div class="project-body">
+              <div class="project-topline">
+                <div>
+                  <h3>F1TENTH Autonomous Racing</h3>
+                  <p class="project-meta">Course Project · Creating the Autonomous Vehicle</p>
+                </div>
+                <span class="project-type">Robotics</span>
+              </div>
+
+              <p>
+                Developed and validated path tracking and vehicle-control components
+                for an F1TENTH autonomous racing platform through repeated real-vehicle testing.
+              </p>
+
+              <ul>
+                <li>Implemented a Pure Pursuit controller with speed-adaptive lookahead distance to improve path-tracking performance.</li>
+                <li>Developed a real-time speed-tuning dashboard to reduce setup time between driving tests, contributing to a 4-second lap-time improvement.</li>
+                <li>Diagnosed localization failures through repeated testing and RViz-based LiDAR analysis, then compensated for the affected sections using IMU-based correction to restore stable driving.</li>
+              </ul>
+
+              <div class="tags">
+                <span>F1TENTH</span>
+                <span>Pure Pursuit</span>
+                <span>ROS</span>
+                <span>RViz</span>
+                <span>LiDAR</span>
+                <span>IMU</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">03</div>
+            <div class="project-body">
+              <div class="project-topline">
+                <div>
+                  <h3>AI-Based Reflection Removal with Diffusion Models</h3>
+                  <p class="project-meta">UIRP Project · Visual Information Processing Lab, UNIST</p>
+                </div>
+                <span class="project-type">Computer Vision</span>
+              </div>
+
+              <p>
+                Investigated diffusion-based approaches for removing reflections from real-world images.
+                Reproduced a prior diffusion-based reflection removal method and explored an IR-SDE-based
+                approach for image restoration.
+              </p>
+
+              <ul>
+                <li>Reproduced a diffusion-based reflection removal method without publicly available implementation code.</li>
+                <li>Designed a lightweight training and inference pipeline under limited computational resources.</li>
+                <li>Improved SSIM from 0.56 to 0.683 through partial-noise inference in the reproduced diffusion model.</li>
+                <li>Evaluated an IR-SDE-based approach, achieving PSNR 22.33 and SSIM 0.902, and analyzed the gap between quantitative image-quality metrics and actual reflection removal quality.</li>
+              </ul>
+
+              <div class="tags">
+                <span>Diffusion Models</span>
+                <span>Image Restoration</span>
+                <span>IR-SDE</span>
+                <span>Reflection Removal</span>
+                <span>PyTorch</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section alt-section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">EXPERIENCE</p>
+          <h2>Research Experience</h2>
+        </div>
+
+        <article class="timeline-item">
+          <div class="timeline-date">Jan. 2026 — Feb. 2026</div>
+          <div>
+            <h3>Research Intern</h3>
+            <p class="subtitle">Robotics & Mobility Lab, UNIST</p>
+            <p>Worked on improving the real-time performance of a diffusion-based end-to-end autonomous driving model.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">Jan. 2025 — Feb. 2025</div>
+          <div>
+            <h3>Research Intern</h3>
+            <p class="subtitle">High Assurance Mobility Control Lab, UNIST</p>
+            <p>Worked on autonomous driving algorithms for an F1TENTH racing platform.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">Mar. 2024 — Nov. 2024</div>
+          <div>
+            <h3>Research Intern</h3>
+            <p class="subtitle">Visual Information Processing Lab, UNIST</p>
+            <p>Conducted research on AI-based reflection removal using diffusion models through the Undergraduate Interdisciplinary Research Program (UIRP).</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">TECHNICAL SKILLS</p>
+          <h2>Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Programming Languages</h3>
+            <p>Python, C++, MATLAB</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Autonomous Driving & Robotics</h3>
+            <p>ROS, RViz, Path Planning, Vehicle Control, Localization</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>AI & Learning</h3>
+            <p>PyTorch, Deep Learning, Reinforcement Learning, Diffusion Models</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Platforms & Tools</h3>
+            <p>F1TENTH, Linux, Git</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-inner">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Feel free to reach out via email.</h2>
+
+        <div class="contact-links">
+          <a class="button primary" href="mailto:lhs2008@unist.ac.kr">Email Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Hyunseok Lee.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
