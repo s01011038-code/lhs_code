@@ -540,18 +540,22 @@ footer {
 
 .project-carousel {
   position: relative;
-  border: 1px solid var(--line);
-  border-radius: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
+  line-height: 0;
 }
 
 .carousel-track {
   position: relative;
+  width: 100%;
 }
 
 .carousel-slide {
   display: none;
   margin: 0;
+  padding: 0;
 }
 
 .carousel-slide.active {
@@ -561,8 +565,9 @@ footer {
 .carousel-slide img {
   width: 100%;
   height: auto;
+  margin: 0;
+  padding: 0;
   display: block;
-  object-fit: contain;
 }
 
 .carousel-button {
