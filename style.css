@@ -523,10 +523,15 @@ footer {
 
 .project-showcase {
   display: grid;
-  grid-template-columns: minmax(224px, 322px) minmax(0, 1fr);
+  grid-template-columns: minmax(320px, 460px) minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   margin-top: 24px;
+}
+
+.project-with-gallery .project-showcase {
+  margin-left: -92px;
+  width: calc(100% + 92px);
 }
 
 .project-showcase-text > p {
@@ -624,4 +629,12 @@ footer {
 .profile-card img.profile-photo {
   border-radius: 0 !important;
   clip-path: none !important;
+}
+
+
+@media (max-width: 900px) {
+  .project-with-gallery .project-showcase {
+    margin-left: 0;
+    width: 100%;
+  }
 }
