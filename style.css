@@ -523,7 +523,7 @@ footer {
 
 .project-showcase {
   display: grid;
-  grid-template-columns: minmax(320px, 460px) minmax(0, 1fr);
+  grid-template-columns: minmax(256px, 368px) minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   margin-top: 24px;
