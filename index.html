@@ -40,8 +40,11 @@
     <section class="hero section" id="about">
       <div class="container hero-grid">
         <aside class="profile-card">
-
-          <img class="profile-photo" src="assets/profile.jpg" alt="Hyunseok Lee">
+          <!--
+            사진을 쓰고 싶다면 아래 .avatar div 대신 다음 코드를 사용하세요.
+            <img class="profile-photo" src="assets/profile.jpg" alt="Hyunseok Lee">
+          -->
+          <div class="avatar" aria-hidden="true">HL</div>
 
           <h1>Hyunseok Lee</h1>
           <p class="role">B.S. in Mechanical Engineering, UNIST</p>
@@ -145,7 +148,7 @@
             </div>
           </article>
 
-          <article class="project">
+          <article class="project project-with-gallery">
             <div class="project-number">02</div>
             <div class="project-body">
               <div class="project-topline">
@@ -156,24 +159,49 @@
                 <span class="project-type">Robotics</span>
               </div>
 
-              <p>
-                Developed and validated path tracking and vehicle-control components
-                for an F1TENTH autonomous racing platform through repeated real-vehicle testing.
-              </p>
+              <div class="project-showcase">
+                <div class="project-carousel" data-carousel>
+                  <button class="carousel-button prev" type="button" aria-label="Previous image">&#8249;</button>
+                  <div class="carousel-track">
+                    <figure class="carousel-slide active">
+                      <img src="assets/f1tenth_car.png" alt="F1TENTH race car platform">
+                    </figure>
+                    <figure class="carousel-slide">
+                      <img src="assets/f1tenth_rviz_driving.png" alt="RViz screenshot captured during F1TENTH driving tests">
+                    </figure>
+                    <figure class="carousel-slide">
+                      <img src="assets/f1tenth_speed_editor.png" alt="RViz speed editing tool for the F1TENTH racing track">
+                    </figure>
+                  </div>
+                  <button class="carousel-button next" type="button" aria-label="Next image">&#8250;</button>
+                  <div class="carousel-dots" aria-label="Slide indicators">
+                    <button class="carousel-dot active" type="button" aria-label="Show slide 1"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 2"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 3"></button>
+                  </div>
+                </div>
 
-              <ul>
-                <li>Implemented a Pure Pursuit controller with speed-adaptive lookahead distance to improve path-tracking performance.</li>
-                <li>Developed a real-time speed-tuning dashboard to reduce setup time between driving tests, contributing to a 4-second lap-time improvement.</li>
-                <li>Diagnosed localization failures through repeated testing and RViz-based LiDAR analysis, then compensated for the affected sections using IMU-based correction to restore stable driving.</li>
-              </ul>
+                <div class="project-showcase-text">
+                  <p>
+                    Developed and validated path tracking and vehicle-control components
+                    for an F1TENTH autonomous racing platform through repeated real-vehicle testing.
+                  </p>
 
-              <div class="tags">
-                <span>F1TENTH</span>
-                <span>Pure Pursuit</span>
-                <span>ROS</span>
-                <span>RViz</span>
-                <span>LiDAR</span>
-                <span>IMU</span>
+                  <ul>
+                    <li>Implemented a Pure Pursuit controller with speed-adaptive lookahead distance to improve path-tracking performance.</li>
+                    <li>Developed a real-time speed-tuning dashboard to reduce setup time between driving tests, contributing to a 4-second lap-time improvement.</li>
+                    <li>Diagnosed localization failures through repeated testing and RViz-based LiDAR analysis, then compensated for the affected sections using IMU-based correction to restore stable driving.</li>
+                  </ul>
+
+                  <div class="tags">
+                    <span>F1TENTH</span>
+                    <span>Pure Pursuit</span>
+                    <span>ROS</span>
+                    <span>RViz</span>
+                    <span>LiDAR</span>
+                    <span>IMU</span>
+                  </div>
+                </div>
               </div>
             </div>
           </article>

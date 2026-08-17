@@ -37,3 +37,38 @@ sections.forEach((section) => observer.observe(section));
 
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
+
+
+const carousels = document.querySelectorAll('[data-carousel]');
+
+carousels.forEach((carousel) => {
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const dots = carousel.querySelectorAll('.carousel-dot');
+  const prevButton = carousel.querySelector('.carousel-button.prev');
+  const nextButton = carousel.querySelector('.carousel-button.next');
+  let currentIndex = 0;
+
+  const renderCarousel = (index) => {
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('active', slideIndex === index);
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('active', dotIndex === index);
+    });
+    currentIndex = index;
+  };
+
+  prevButton?.addEventListener('click', () => {
+    const nextIndex = (currentIndex - 1 + slides.length) % slides.length;
+    renderCarousel(nextIndex);
+  });
+
+  nextButton?.addEventListener('click', () => {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    renderCarousel(nextIndex);
+  });
+
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener('click', () => renderCarousel(dotIndex));
+  });
+});
