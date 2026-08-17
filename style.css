@@ -117,7 +117,7 @@ a { color: inherit; }
 
 /* Keep the uploaded portrait rectangular and preserve its original aspect ratio. */
 .profile-photo {
-  width: 147px;
+  width: 210px;
   height: auto;
   object-fit: contain;
   border-radius: 0;
@@ -523,7 +523,7 @@ footer {
 
 .project-showcase {
   display: grid;
-  grid-template-columns: minmax(320px, 460px) minmax(0, 1fr);
+  grid-template-columns: minmax(224px, 322px) minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   margin-top: 24px;
@@ -617,4 +617,10 @@ footer {
   .project-showcase {
     grid-template-columns: 1fr;
   }
+}
+
+
+.profile-card img.profile-photo {
+  border-radius: 0 !important;
+  clip-path: none !important;
 }
