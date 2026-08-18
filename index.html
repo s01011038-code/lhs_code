@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=13" />
 </head>
 
 <body>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="project-list">
-          <article class="project">
+          <article class="project project-with-gallery">
             <div class="project-number">01</div>
             <div class="project-body">
               <div class="project-topline">
@@ -117,25 +117,41 @@
                 <span class="project-type">Research</span>
               </div>
 
-              <p>
-                Investigated the real-time performance of DiffusionDrive for end-to-end autonomous driving.
-                I introduced a DiG-based backbone and a consistency-model-based training strategy into the
-                trajectory generation module, and evaluated the modified pipeline on the NAVSIM benchmark.
-              </p>
+              <div class="project-showcase">
+                <div class="project-carousel" data-carousel>
+                  <button class="carousel-button prev" type="button" aria-label="Previous image">&#8249;</button>
+                  <div class="carousel-track">
+                    <figure class="carousel-slide active"><img src="assets/diffusiondrive_1.png" alt="Overall DiffusionDrive model architecture and diffusion decoder"></figure>
+                    <figure class="carousel-slide"><img src="assets/diffusiondrive_2.png" alt="Consistency model trajectories and DiG model architecture"></figure>
+                    <figure class="carousel-slide"><img src="assets/diffusiondrive_3.png" alt="Proposed trajectory generation and PDMS-based selection pipeline"></figure>
+                    <figure class="carousel-slide"><img src="assets/diffusiondrive_4.png" alt="Detailed DiG block architecture used in the proposed model"></figure>
+                    <figure class="carousel-slide"><img src="assets/diffusiondrive_5.png" alt="NAVSIM evaluation results including inference latency and PDMS submetrics"></figure>
+                  </div>
+                  <button class="carousel-button next" type="button" aria-label="Next image">&#8250;</button>
+                  <div class="carousel-dots" aria-label="Slide indicators">
+                    <button class="carousel-dot active" type="button" aria-label="Show slide 1"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 2"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 3"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 4"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 5"></button>
+                  </div>
+                </div>
 
-              <ul>
-                <li>Removed K-means anchor preprocessing and generated multiple trajectories from pure noise, selecting the final trajectory using PDMS submetrics.</li>
-                <li>Evaluated the modified pipeline on NAVSIM, where latency increased from 459.9 ms to 808.75 ms and PDMS decreased from 0.881 to 0.642.</li>
-                <li>Analyzed the latency bottleneck by separating the diffusion decoder from the full pipeline, identifying both decoder overhead and repeated candidate-evaluation costs.</li>
-              </ul>
-
-              <div class="tags">
-                <span>End-to-End Autonomous Driving</span>
-                <span>Diffusion Model</span>
-                <span>Consistency Model</span>
-                <span>DiG</span>
-                <span>NAVSIM</span>
-                <span>PyTorch</span>
+                <div class="project-showcase-text">
+                  <p>
+                    Investigated the real-time performance of DiffusionDrive for end-to-end autonomous driving.
+                    I introduced a DiG-based backbone and a consistency-model-based training strategy into the
+                    trajectory generation module, and evaluated the modified pipeline on the NAVSIM benchmark.
+                  </p>
+                  <ul>
+                    <li>Removed K-means anchor preprocessing and generated multiple trajectories from pure noise, selecting the final trajectory using PDMS submetrics.</li>
+                    <li>Evaluated the modified pipeline on NAVSIM, where latency increased from 459.9 ms to 808.75 ms and PDMS decreased from 0.881 to 0.642.</li>
+                    <li>Analyzed the latency bottleneck by separating the diffusion decoder from the full pipeline, identifying both decoder overhead and repeated candidate-evaluation costs.</li>
+                  </ul>
+                  <div class="tags">
+                    <span>End-to-End Autonomous Driving</span><span>Diffusion Model</span><span>Consistency Model</span><span>DiG</span><span>NAVSIM</span><span>PyTorch</span>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -379,6 +395,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>
